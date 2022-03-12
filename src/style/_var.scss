@@ -1,0 +1,88 @@
+$mainColorSidebar: #ffffff;
+$mainColorView: #faf8f5;
+$colorText: #505050;
+$colorTextPost: #8a8a8d;
+$colorBorder: #e0ddda;
+
+$colorButton: #e9e6df;
+$colorViewHeader: #eae7e4;
+$noteBackground: #f1f1f1;
+$colorBorderSquare: #cecece;
+
+// VL - VeryLight
+// L - Light
+// D - Dark
+$colorRed: #d95757;
+$colorGreen: #58b070;
+$colorLightGreen: #7fe89c;
+$colorYellowVL: #ffebae;
+$colorYellowL: #ffd657;
+$colorYellowD: #f8b200;
+$colorGrey: #bcbec1;
+$colorBlue: #4592e0;
+
+$colorNote: #bcbec1;
+$colorMeeting: #58b070;
+$colorRc: #ffd657; //green;
+$colorPrj_rc: #ffd657; //darkblue;
+$colorResolution: #ffd657; //teal;
+$colorVisa: #ffd657; //blue;
+$colorExpiring: #d95757;
+$colorHref: #2196f3;
+
+$infoBackgroundNotes: #f8f8f8;
+
+$bdrs: 5px;
+$borderModalWindow: #cac7be;
+$bgPasteButton: #505050;
+$bgPasteButtonContainsRC: #c7c6c4;
+$borderInput: #676869;
+
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexEnd {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@mixin flexCenterCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexCenterSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flexBaseLineCenter {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@mixin chromeScrollBar {
+  &::-webkit-scrollbar-track {
+    background-color: $mainColorView;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: $colorBorder;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $colorGrey;
+  }
+}

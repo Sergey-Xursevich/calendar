@@ -1,0 +1,36 @@
+@import "../../../../style/var";
+
+.body {
+  .control {
+    @include flexCenterSpaceBetween;
+    .paste {
+      width: 530px;
+      height: 24px;
+      padding-right: 25px;
+      box-sizing: border-box;
+    }
+
+    .showPerson {
+      width: 100%;
+      height: 80px;
+      overflow-y: auto;
+    }
+  }
+
+  .main {
+    width: 100%;
+    height: 80px;
+    padding: 5px 10px;
+    background-color: $mainColorSidebar;
+    border: 1px solid $borderInput;
+    font-size: 14px;
+    color: $colorText;
+    overflow-y: auto;
+    @include ellipsis;
+    text-align: left;
+
+    span {
+      display: block;
+    }
+  }
+}

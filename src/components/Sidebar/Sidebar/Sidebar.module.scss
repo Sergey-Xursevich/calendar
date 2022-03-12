@@ -1,0 +1,13 @@
+@import "../../../style/var";
+
+.sidebar {
+  height: 100%;
+  //   height: 99.8%; //fix appears scrollbar
+  min-width: 300px;
+  width: 25%;
+  max-width: 400px;
+  display: flex;
+  flex-flow: column;
+  background-color: $mainColorSidebar;
+  border-right: 1px solid $colorBorder;
+}

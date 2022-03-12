@@ -1,0 +1,167 @@
+@import "../../style/var";
+
+.year {
+  height: calc(100% - 105px);
+  width: calc(100% - 80px);
+  max-height: 900px;
+  display: flex;
+  flex-flow: row wrap;
+  background-color: $mainColorSidebar;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 4px;
+  border: 1px solid #e0ddda;
+  transition: 300ms;
+  opacity: 1;
+  &.loading {
+    transition: 300ms;
+    opacity: 0.5;
+  }
+  .month {
+    width: 25%;
+    padding: 0 1%;
+    border: 1px solid transparent; //fix for selection;
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    text-align: center;
+    overflow: hidden; // fix wrappers padding
+
+    .monthTitle {
+      height: 13%;
+      padding: 5px 0;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .wrapWeekDays {
+      display: flex;
+      flex-flow: row wrap;
+      height: 7%;
+      .weekDays {
+        height: 7%;
+        flex: 0 0 auto;
+        width: 14.2%;
+        box-sizing: border-box;
+        text-align: center;
+        border: 2px solid transparent; //fix for selection;
+      }
+    }
+
+    .monthBody {
+      height: 80%;
+      display: flex;
+      flex-flow: row wrap;
+
+      .day {
+        flex: 0 0 auto;
+        width: 14.2%;
+        box-sizing: border-box;
+        cursor: pointer;
+        border: 2px solid transparent; //fix for selection;
+        position: relative;
+        text-align: center;
+        @include flexCenter;
+        flex-flow: column wrap;
+
+        .date {
+          height: 12px;
+          line-height: 12px;
+          color: #bebebe;
+        }
+
+        &:hover {
+          border: 2px solid rgba(255, 214, 87, 0.5);
+          border-radius: 2px;
+          background-color: $mainColorView;
+        }
+
+        &.selectedDay {
+          border: 2px solid rgb(255, 214, 87);
+          border-radius: 2px;
+          background-color: $mainColorView;
+          .date {
+            font-weight: bold;
+            color: #505050;
+          }
+        }
+
+        &.holiday {
+          .date {
+            color: #e17979;
+          }
+        }
+
+        .dayItems {
+          position: absolute;
+          top: 11px;
+          width: 100%;
+          left: 0;
+          flex-flow: column wrap;
+          @include flexCenterCenter;
+
+          .dayDots {
+            margin-top: 1px;
+            display: flex;
+            justify-content: center;
+
+            .dayDot {
+              margin: 0 1px;
+              width: 4px;
+              height: 4px;
+              border-radius: 2px;
+
+              &.blueDot {
+                background-color: $colorBlue;
+              }
+
+              &.greenDot {
+                background-color: $colorLightGreen;
+              }
+
+              &.yellowDot {
+                background-color: $colorYellowD;
+              }
+            }
+          }
+
+          .dayLines {
+            width: 25px;
+            margin: 1px 0;
+            display: flex;
+
+            .dayLine {
+              min-width: 4px;
+              flex: 1;
+              margin: 0 1px;
+              height: 2px;
+
+              &.yellowLine {
+                background-color: $colorYellowD;
+              }
+
+              &.blueLine {
+                background-color: $colorBlue;
+              }
+
+              &.greenLine {
+                background-color: $colorLightGreen;
+              }
+            }
+          }
+
+          .message {
+            width: 100%;
+          }
+        }
+      }
+
+      .mock {
+        flex: 0 0 auto;
+        width: 14.2%;
+        box-sizing: border-box;
+        border: 2px solid transparent; //fix for selection;
+        cursor: default;
+      }
+    }
+  }
+}

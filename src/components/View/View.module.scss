@@ -1,0 +1,70 @@
+@import "../../style/var";
+
+.view {
+  height: 100%;
+  flex: 1;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  background-color: $mainColorView;
+  justify-content: space-between;
+}
+
+.header {
+  height: 30px;
+  width: calc(100% - 80px);
+  max-width: 1200px;
+  @include flexCenterSpaceBetween;
+  margin: 15px auto 20px;
+}
+
+.homeLinkButton {
+  width: 100px;
+  height: 24px;
+  border: 1px solid #505050;
+  background: #FFFFFF;
+  border-radius: 4px;
+  @include flexCenterCenter;
+  font-weight: bold;
+  text-decoration: none;
+  color: #505050;
+  font-size: 12px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.settings {
+  cursor: pointer;
+  top: 0;
+  right: 0;
+}
+
+.icons {
+  width: 240px;
+  @include flexEnd;
+
+}
+
+.rangeGrid {
+  width: calc(100% - 80px);
+  height: calc(60% - 80px);
+  min-height: 420px;
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  border: 1px solid $colorBorderSquare;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.homeLinkWrapper {
+  width: 240px;
+}
+
+@media (max-width: 1299px) {
+  .homeLinkWrapper {
+    width: 210px;
+  }
+}

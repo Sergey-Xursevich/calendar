@@ -1,0 +1,50 @@
+.blue {
+  height: 21px;
+  position: relative;
+}
+.input {
+  box-sizing: border-box;
+  border: 1px solid #676869;
+  outline: none;
+  width: 100%;
+  padding-left: 20px;
+}
+.dropDown {
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+.dropDownItem {
+  padding: 5px;
+
+  &.selected {
+    background-color: #fffaba;
+  }
+  &:hover {
+    background-color: #ffebae;
+  }
+}
+.inputPlus {
+  position: absolute;
+  color: #2459a9;
+  left: 3px;
+  top: 0;
+  max-width: 10px;
+}
+.clearButton {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  height: 20px;
+  right: 20px;
+}
+.openClassif {
+  cursor: pointer;
+  position: absolute;
+  height: 20px;
+  top: 0;
+  right: 5px;
+}

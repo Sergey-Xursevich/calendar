@@ -1,0 +1,31 @@
+@import "../../../style/var";
+
+.notesBlock {
+  max-height: calc(100% - 30px - 118px - 156px);
+  width: 100%;
+  @include flexCenter;
+  flex-direction: column;
+  @include chromeScrollBar;
+}
+
+.titleNotes {
+  padding: 15px 0;
+  @include flexCenter;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.newNoteButton {
+  margin-top: 10px;
+  width: 140px;
+}
+
+.allNotes {
+  overflow-y: auto;
+  width: 100%;
+  @include chromeScrollBar;
+}
+
+span.holiday {
+  color: #d95757;
+}

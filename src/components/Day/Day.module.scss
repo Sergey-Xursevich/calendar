@@ -1,0 +1,210 @@
+@import "../../style/var";
+
+.day {
+  height: 100%;
+}
+
+.header {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: bold;
+  background-color: $colorViewHeader;
+  border-bottom: 1px solid $colorBorder;
+  span.holiday {
+    color: #d95757;
+  }
+}
+
+.empty {
+  width: 275px;
+  margin: 200px auto;
+  color: #8a8a8d;
+}
+
+.timeLine {
+  height: calc(100% - 40px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: $mainColorSidebar;
+}
+
+.timeLineItem {
+  cursor: pointer;
+  display: flex;
+  min-height: 40px;
+  padding: 15px 0;
+  @include flexBaseLineCenter;
+  &:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  &:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  &.selected {
+    background-color: #ffebae;
+  }
+}
+
+.time {
+  font-weight: bold;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.events {
+  width: calc(100% - 70px);
+  flex: 1;
+  background-color: $mainColorSidebar;
+}
+
+.event,
+.meeting {
+  width: calc(100% - 4px);
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  border-bottom: 1px solid $colorBorder;
+  border-radius: 5px;
+  margin: 2px;
+
+  .number {
+    width: 200px;
+    @include ellipsis;
+    text-align: center;
+  }
+
+  .name {
+    flex: 1;
+    padding: 0 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    line-height: 24px;
+  }
+
+  .wrapDate {
+    width: 150px;
+    text-align: center;
+
+    .date {
+      font-weight: bold;
+    }
+  }
+}
+
+.meeting {
+  background-color: $colorGreen;
+
+  div,
+  span {
+    color: $mainColorSidebar;
+  }
+}
+
+.event {
+  background-color: $colorGrey;
+
+  div,
+  span {
+    color: $mainColorSidebar;
+  }
+}
+
+.reminder {
+  .headerReminder {
+    font-weight: bold;
+  }
+}
+
+.body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: calc(100% - 100px);
+
+  &.plan {
+    border: 2px dashed $colorGreen;
+    margin-right: 20px;
+    border-radius: 4px;
+
+    .title {
+      @include flexCenterSpaceBetween;
+      padding: 10px;
+      border-bottom: 2px dashed $colorGreen;
+      color: $colorGreen;
+      font-weight: bold;
+      background-color: $mainColorSidebar;
+      span {
+        padding-left: 5px;
+        color: inherit;
+        font-weight: inherit;
+      }
+    }
+    .TitleName {
+      flex: 1;
+      @include ellipsis;
+    }
+    .content {
+      padding: 10px;
+      background-color: $mainColorSidebar;
+    }
+    .row{
+      display: flex;
+    }
+    .column {
+      display: flex;
+      min-width: 145px;
+      flex-direction: column;
+    }
+  }
+
+  &.meetingDay {
+    border: 2px solid $colorGreen;
+    background-color: $colorGreen;
+    margin-right: 20px;
+    border-radius: 4px;
+
+    .title {
+      @include flexCenterSpaceBetween;
+      background-color: $colorGreen;
+      padding: 10px;
+      color: $mainColorSidebar;
+      font-weight: bold;
+      span {
+        padding-left: 5px;
+        color: inherit;
+        font-weight: inherit;
+      }
+    }
+    .TitleName {
+      flex: 1;
+      @include ellipsis;
+    }
+    .content {
+      padding: 10px;
+      background-color: $mainColorSidebar;
+    }
+  }
+}
+.link {
+  display: inline-block;
+  padding: 0 15px;
+  border-radius: 15px;
+  background-color: rgba($color: #000000, $alpha: 0.07);
+  margin: 10px;
+  &:hover {
+    background-color: rgba($color: #000000, $alpha: 0.15);
+  }
+}
+.refs {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  div {
+    width: 30%;
+    margin-right: 1%;
+  }
+}

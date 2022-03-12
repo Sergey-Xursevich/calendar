@@ -1,0 +1,66 @@
+@import "../../../style/var";
+
+.countEvent {
+  display: flex;
+  width: 50%;
+  // flex-wrap: wrap;
+  // justify-content: flex-end;
+  align-items: center;
+
+  &:nth-child(odd) {
+    justify-content: flex-end;
+  }
+}
+
+.circle {
+  text-align: center;
+  min-width: 25px;
+  height: 25px;
+  display: inline-block;
+  padding: 2px;
+  margin: 10px 3px;
+  border-radius: 12.5px;
+  color: white;
+  font-weight: bold;
+  line-height: 19px;
+}
+
+.square {
+  text-align: center;
+  min-width: 25px;
+  height: 25px;
+  display: inline-block;
+  padding: 2px;
+  margin: 10px 3px;
+  font-weight: bold;
+  line-height: 17px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.label {
+  text-align: left;
+  font-size: 12px;
+  width: 80px;
+  font-weight: bold;
+}
+
+.grey {
+  border: 1px solid $colorBorderSquare;
+}
+
+.yellow {
+  background-color: $colorYellowD;
+}
+
+.blue {
+  background-color: $colorBlue;
+}
+
+.green {
+  background-color: $colorGreen;
+}
+
+.red {
+  background-color: $colorRed;
+}

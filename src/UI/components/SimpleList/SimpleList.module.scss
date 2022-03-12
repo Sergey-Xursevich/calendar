@@ -1,0 +1,32 @@
+.wrapper {
+  width: 100%;
+  min-height: 80px;
+  max-height: 100px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #676869;
+  background-color: #ffffff;
+  overflow-y: scroll;
+}
+.textarea {
+  width: 99%;
+  border: none;
+  resize: none;
+  outline: none;
+  overflow: hidden;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &:hover {
+    background-color: #ffebae;
+  }
+}
+.iconDelete {
+  margin-right: 5px;
+  cursor: pointer;
+}
+.disabled {
+  opacity: 0.5;
+}

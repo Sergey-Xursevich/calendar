@@ -1,0 +1,61 @@
+@import "../../style/var";
+
+.wrapper {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .item {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    padding-left: 5%;
+
+    &.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &.selected {
+      background-color: #FCF2D3;
+    }
+
+    &:hover {
+      background: $colorYellowL;
+    }
+  }
+}
+
+.wrapOptions {
+  position: absolute;
+  top: 28px;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 80vh;
+  transition: height 1s;
+  border: 1px solid $colorButton;
+  @include chromeScrollBar;
+}
+
+.opened {
+  background-color: $colorButton;
+  z-index: 99;
+}
+
+// .closed {}
+
+.level {
+  text-align: left;
+  background: #faf8f5;
+
+  .level {
+    padding-left: 5%;
+  }
+}
+
+.header {
+  font-size: 11px;
+}

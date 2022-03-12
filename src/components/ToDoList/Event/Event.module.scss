@@ -1,0 +1,95 @@
+@import "../../../style/var";
+
+.event {
+  height: 50px;
+  @include flexCenterSpaceBetween;
+  cursor: pointer;
+  border-bottom: 1px solid $colorBorderSquare;
+
+  &.selected {
+    background-color: $colorYellowVL;
+  }
+
+  &.expired {
+    span,
+    .dateTo,
+    .name,
+    .numberWrap {
+      color: #d95757;
+    }
+  }
+
+  .kindDoc {
+    width: 85px;
+    padding-left: 10px;
+  }
+
+  .numberWrap {
+    cursor: pointer;
+    width: 100px;
+    &:hover {
+      text-decoration: underline;
+    }
+
+    div {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  .name {
+    flex: 1 1;
+    padding: 0 20px;
+    @include ellipsis;
+  }
+
+  .dateTo {
+    width: 150px;
+  }
+
+  .eventType {
+    width: 120px;
+    text-align: center;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 8px;
+    line-height: 1;
+    color: white;
+    font-size: 12px;
+    border: 2px solid;
+
+    &.resolution {
+      border-color: $colorYellowD;
+      background-color: $colorYellowD;
+    }
+
+    &.visaSign {
+      border-color: $colorBlue;
+      background-color: $colorBlue;
+    }
+
+    &.meeting {
+      border-color: $colorGreen;
+      background-color: $colorGreen;
+
+      &.cancelled {
+        background-color: $colorBorderSquare;
+        border-color: $colorBorderSquare;
+      }
+    }
+
+    &.plan {
+      color: $colorGreen;
+      border-style: dashed;
+      border-color: $colorGreen;
+      background-color: $mainColorSidebar;
+
+      &.cancelled {
+        background-color: $mainColorSidebar;
+        color: $colorBorderSquare;
+        border-color: $colorBorderSquare;
+      }
+    }
+  }
+}

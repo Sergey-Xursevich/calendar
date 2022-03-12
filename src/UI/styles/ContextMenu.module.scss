@@ -1,0 +1,29 @@
+.contextMenu {
+  position: absolute;
+  background-color: white;
+  color: red;
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.item {
+  padding: 5px 10px;
+  min-width: 300px;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid lightgrey;
+  }
+
+  &:hover {
+    background-color: #fee9a9;
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,127 @@
+@import "../../style/var";
+
+.settings {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  background-color: $mainColorSidebar;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: space-between;
+}
+
+.header {
+  background-color: $colorViewHeader;
+  height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 40px;
+  text-align: center;
+}
+
+.content {
+  flex: 1;
+  width: calc(100% - 80px);
+  height: calc(100% - 160px);
+  margin: 0 auto;
+
+  &>span {
+    display: inline-block;
+    margin: 10px 0;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  &>div,
+  &>label {
+    margin-left: 20px;
+
+    &>input[type="checkbox"] {
+      display: inline-flex !important;
+    }
+
+    &>img[alt] {
+      display: none;
+    }
+
+    &>span {
+      font-size: 14px;
+    }
+  }
+}
+
+.footer {
+  width: calc(100% - 80px);
+  margin: 40px auto;
+  text-align: right;
+
+  &>button {
+    margin-right: 10px;
+  }
+}
+
+.DLPlan,
+.exportWrapper {
+  padding-left: 20px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+.iconWrapper {
+  display: flex;
+  justify-content: flex-end;
+
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.dates {
+  .labelMain {
+    width: 120px;
+    text-align: right;
+  }
+
+  .datePicker {
+    margin-left: 10px;
+    width: 105px;
+  }
+
+  .dateFrom,
+  .dateTo {
+    display: flex;
+  }
+
+  .datesStart,
+  .datesFinish {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+    font-size: 13px;
+  }
+}
+
+.exportWrapper {
+  position: relative;
+  padding-left: 0;
+
+  .exportStart {
+    height: 24px;
+
+    .dateFrom {
+      &>span {
+        width: 65px;
+        text-align: right;
+        line-height: .8em;
+      }
+    }
+  }
+
+  .spinner {
+    position: absolute;
+    right: -30px;
+  }
+}

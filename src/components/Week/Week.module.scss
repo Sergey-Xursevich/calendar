@@ -1,0 +1,245 @@
+@import "../../style/var";
+
+.week {
+  height: 100%;
+
+  .header {
+    flex-flow: row wrap;
+    display: flex;
+  }
+
+  .weekBody {
+    height: calc(99.9% - 40px);
+    flex-flow: row wrap;
+    overflow-y: scroll;
+
+    @-moz-document url-prefix() {
+      padding-right: 0px !important;
+    }
+  }
+
+  .title {
+    width: calc(99.9% / 7);
+    // position: fixed;
+    text-align: center;
+    font-size: 12px;
+    @include flexCenterCenter;
+    line-height: 16px;
+    flex-flow: column;
+    height: 40px;
+    font-weight: bold;
+    background-color: #eae7e4;
+    border-bottom: 1px solid #cecece;
+    span {
+      color: #8a8a8d;
+    }
+    &:not(:nth-child(7n)) {
+      border-right: 1px solid #cecece;
+    }
+
+    &.holiday span {
+      color: #E17979 !important;
+    }
+  }
+
+  .selected {
+    background-color: #ffebae;
+    &.title {
+      background-color: $colorYellowL;
+      span {
+        color: #505050;
+        font-weight: bold;
+      }
+      &.holiday span {
+        color: #870000 !important;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .day {
+    width: calc((99.9% + 17px) / 7);
+    min-height: 400px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+
+    &:not(:nth-child(7n)) {
+      border-right: 1px solid #cecece;
+    }
+    &:last-child {
+      width: calc(99.9% / 7 - 17px);
+    }
+
+    .body {
+      .eventItem {
+        display: flex;
+        flex-flow: column;
+        text-align: left;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 4px;
+
+        .stage,
+        .nameDoc,
+        .dateTo,
+        .date,
+        .bodyNote {
+          color: white;
+          @include ellipsis;
+        }
+
+        .stage,
+        .date {
+          font-weight: bold;
+        }
+      }
+
+      .resolution {
+        cursor: pointer;
+        background-color: $colorYellowD;
+        border: 3px solid transparent;
+        transition: 0.2s;
+        &.selected {
+          transition: 0.2s;
+          border: 3px solid #ae7d00;
+        }
+      }
+
+      .reminder {
+        cursor: pointer;
+        background-color: $colorRed;
+        border: 3px solid transparent;
+        transition: 0.2s;
+        &.selected {
+          transition: 0.2s;
+          border: 3px solid #ad4545;
+        }
+      }
+
+      .visaSign {
+        cursor: pointer;
+        background-color: $colorBlue;
+        border: 3px solid transparent;
+        transition: 0.2s;
+        &.selected {
+          transition: 0.2s;
+          border: 3px solid #30669d;
+        }
+      }
+
+      .note {
+        cursor: pointer;
+        background-color: $colorGrey;
+        border: 3px solid transparent;
+        transition: 0.2s;
+        &.selected {
+          transition: 0.2s;
+          border: 3px solid #848587;
+        }
+      }
+      .plan {
+        cursor: pointer;
+        background-color: $mainColorSidebar;
+        border: 3px dashed $colorGreen;
+        transition: 0.2s;
+        color: $colorGreen;
+        &.selected {
+          transition: 0.2s;
+          border: 3px solid $colorGreen;
+        }
+        .planHeader {
+          display: flex;
+          justify-content: space-between;
+          font-weight: bold;
+        }
+        .planTime {
+          display: flex;
+          flex-direction: column;
+          color: $colorGreen;
+          span {
+            color: inherit;
+          }
+        }
+        .planTitle {
+          color: $colorGreen;
+          text-transform: uppercase;
+          font-weight: bold;
+          @include ellipsis;
+        }
+        .planBody {
+          color: $colorGreen;
+          @include ellipsis;
+        }
+      }
+      .meeting {
+        cursor: pointer;
+        background-color: $colorGreen;
+        border: 3px solid transparent;
+        transition: 0.2s;
+        &.selected {
+          transition: 0.2s;
+          border: 3px solid $colorGreen * 0.7;
+        }
+        .meetingHeader {
+          display: flex;
+          justify-content: space-between;
+          font-weight: bold;
+        }
+        .meetingTime {
+          display: flex;
+          flex-direction: column;
+          color: $mainColorSidebar;
+          span {
+            color: inherit;
+          }
+        }
+        .meetingTitle {
+          color: $mainColorSidebar;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+        .meetingBody {
+          color: $mainColorSidebar;
+        }
+      }
+    }
+  }
+}
+
+.timeRange {
+  font-size: 12px;
+  font-weight: bold;
+  color: $mainColorSidebar;
+  div {
+    color: $mainColorSidebar;
+  }
+}
+
+.tooltipElement {
+  width: 550px;
+  padding: 10px;
+  display: flex;
+  margin: 10px;
+  display: flex;
+  flex-direction: column; 
+}
+
+.tooltipRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.columnLeft {
+  min-width: 150px;
+  width: 20%;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.columnRight {
+  width: 80%;
+  @include ellipsis;
+  display: flex;
+  flex-direction: column;
+}

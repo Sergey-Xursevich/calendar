@@ -1,0 +1,44 @@
+.view-exit-done {
+  margin-bottom: 0;
+  height: 0px;
+  max-height: 0px;
+}
+.view-enter-done,
+.view-appear,
+.view-exit {
+  margin-bottom: 20px;
+  height: calc(60% - 80px);
+  max-height: calc(60% - 80px);
+}
+.view-enter-active {
+  animation: inViewGrid 0.3s ease-in-out 1;
+}
+.view-exit-active {
+  animation: outViewGrid 0.3s ease-in-out 1;
+}
+
+@keyframes inViewGrid {
+  0% {
+    margin-bottom: 0;
+    height: 0px;
+    max-height: 0px;
+  }
+  100% {
+    margin-bottom: 20px;
+    height: 100%;
+    max-height: calc(60% - 80px);
+  }
+}
+
+@keyframes outViewGrid {
+  0% {
+    margin-bottom: 20px;
+    height: 100%;
+    max-height: calc(60% - 80px);
+  }
+  100% {
+    margin-bottom: 0;
+    height: 0px;
+    max-height: 0px;
+  }
+}

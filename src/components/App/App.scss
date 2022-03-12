@@ -1,0 +1,63 @@
+@import "../../style/var";
+
+#root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+html {
+  height: 100vh;
+  width: 100vw;
+  min-width: 1000px;
+  min-height: 800px;
+  overflow: auto;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+textarea {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+div,
+span,
+li {
+  user-select: none;
+  box-sizing: border-box;
+  color: $colorText;
+}
+input::-ms-clear {
+  display: none;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+#error-nullDL {
+  margin: 100px auto;
+  font-size: 36px;
+  color: $colorExpiring;
+}
+
+#start-loading {
+  margin: 100px auto;
+  font-size: 36px;
+  color: $colorHref;
+}

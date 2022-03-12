@@ -1,0 +1,44 @@
+@import "../../../style/var";
+
+.legend {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-flow: column;
+}
+.title {
+  font-size: 14px;
+  font-weight: bold;
+}
+.types {
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 12px;
+}
+.type {
+  @include flexCenter;
+  min-width: 50%;
+}
+
+.dayItem {
+  width: 4px;
+  height: 4px;
+  margin-right: 5px;
+  border-radius: 2px;
+}
+
+.redDot {
+  background-color: $colorRed;
+}
+
+.yellowDot {
+  background-color: $colorYellowD;
+}
+
+.greenDot {
+  background-color: $colorGreen;
+}
+
+.message {
+  margin-right: 5px;
+}

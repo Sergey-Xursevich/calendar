@@ -1,0 +1,60 @@
+@import "var";
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.window {
+  background-color: white;
+  min-width: 420px;
+  border: 1px solid #95958d;
+}
+
+.header {
+  padding: 5px 10px;
+  background-color: #cac7be;
+  color: rgb(80, 80, 80);
+  font-size: 14px;
+}
+
+.wrapper {
+  background-color: $colorMain;
+  border: 1px solid $colorBorderBody;
+
+  .body {
+    padding: 20px;
+    font-size: 13px;
+    color: $colorText;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+
+    button {
+      padding: 10px 30px;
+      background-color: $backgroundColourBtn;
+      border: 1px solid $colorButtonBorder;
+      border-radius: 0px;
+
+      &:first-child {
+        margin-right: 10px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: $colorYellow;
+      }
+    }
+  }
+}

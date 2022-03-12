@@ -1,0 +1,29 @@
+@import "var";
+
+.fileUpload {
+  position: relative;
+  overflow: hidden;
+  width: 100px;
+  height: 21px;
+  background: $colorButton;
+  border: 1px solid $colorBtnBorder;
+  text-align: center;
+
+  &:hover {
+    background: $colorBtnHover;
+  }
+
+  input[type="file"] {
+    display: none !important;
+  }
+
+  & > label {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;    
+  }
+}

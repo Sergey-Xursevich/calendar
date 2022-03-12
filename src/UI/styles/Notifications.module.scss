@@ -1,0 +1,55 @@
+@import "./var";
+
+.NotificationContainer {
+    position: fixed;
+    width: auto;
+    text-align: center;
+    user-select: none;
+    z-index: 100;
+    left: calc(50vw - 270px);
+    top: 50px;
+
+    .Notification {
+        color: white;
+
+        padding: 10px;
+        box-shadow: 5px 4px 12px -5px rgba(0, 0, 0, 0.54);
+        width: 500px;
+        margin: auto;
+
+        border-radius: 5px;
+
+        margin-top: 10px;
+        opacity: 0.95;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &.NT3 {
+            background-color: rgb(175, 94, 2);
+        }
+
+        &.NT2 {
+            background-color: green;
+        }
+
+        &.NT1 {
+            background-color: crimson;
+        }
+
+        &.NT0 {
+            background-color: steelblue;
+        }
+
+        button {
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 3px 7px;
+            position: absolute;
+            bottom: 3px;
+            right: 3px;
+        }
+    }
+}

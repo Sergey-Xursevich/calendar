@@ -1,0 +1,66 @@
+@import "../../style/var";
+
+.month {
+  height: 100%;
+  opacity: 1;
+  transition: 200ms;
+  &.loading {
+    transition: 200ms;
+    opacity: 0.5;
+  }
+}
+
+.hide {
+  height: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+}
+
+.weekInMonth {
+  height: auto;
+  flex: 1;
+  display: flex;
+  border-bottom: 1px solid #cecece;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.weekDays {
+  position: relative;
+  flex: 1 1 14%;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  background-color: $colorViewHeader;
+  border-right: 1px solid #cecece;
+  border-bottom: 1px solid #cecece;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  &:last-child {
+    border-right: none;
+  }
+  span {
+    color: #8a8a8d;
+  }
+  &:nth-last-child(-n + 2) span {
+    // Ставим цвет двум последним
+    color: #e17979;
+  }
+}
+
+.weekDaysName {
+  left: 5%;
+}
+
+.wrapDays {
+  display: flex;
+  flex-flow: row wrap;
+  height: calc(100% - 40px);
+}

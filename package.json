@@ -1,0 +1,58 @@
+{
+  "name": "mr-events-react",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": ".",
+  "dependencies": {
+    "@eos/mrsoft-core": "^1.3.7",
+    "@types/classnames": "^2.2.10",
+    "@types/jest": "24.0.19",
+    "@types/node": "12.11.7",
+    "@types/preval.macro": "^3.0.0",
+    "@types/react": "16.9.10",
+    "@types/react-datepicker": "3.1.2",
+    "@types/react-dom": "16.9.2",
+    "@types/react-redux": "^7.1.7",
+    "@types/react-textarea-autosize": "^4.3.5",
+    "@types/react-transition-group": "^4.2.3",
+    "@types/redux-logger": "^3.0.7",
+    "classnames": "^2.2.6",
+    "date-fns": "^2.8.1",
+    "dateformat": "^3.0.3",
+    "mdn-polyfills": "^5.18.0",
+    "node-sass": "^4.13.1",
+    "react": "^16.9.0",
+    "react-app-polyfill": "^1.0.6",
+    "react-datepicker": "^3.4.1",
+    "react-dom": "^16.9.0",
+    "react-jss": "^10.6.0",
+    "react-redux": "^7.1.3",
+    "react-scripts": "^3.4.1",
+    "react-sortable-hoc": "^1.11.0",
+    "react-textarea-autosize": "^8.0.1",
+    "react-transition-group": "^4.3.0",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "typescript": "^3.7.5"
+  },
+  "scripts": {
+    "watch": "cra-build-watch --verbose --build-path ..\\MREvents\\Events.app",
+    "watch-both": "concurrently \"cra-build-watch --verbose --build-path ..\\MREvents\\Events.app\"  \"(cd ../../_Core && npm run watch-lib)\"",
+    "build-app": "(rmdir ..\\MREvents\\Events.app /S /Q) & react-scripts build & (robocopy ./build ../MREvents/Events.app /MIR /NJH /NJS || exit 0)",
+    "build-lib": "cd ../../_Core && npm run build-lib",
+    "register-core": "npm link ../../_Core/node_modules/react & npm link ../../_Core/node_modules/react-dom & cd ../../_Core & npm link & cd ../MREvents_2020/MREvents.React & npm link @mrsoft/core"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie <= 8"
+  ],
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "cra-build-watch": "^3.2.1-mrsoft.2",
+    "preval.macro": "^5.0.0"
+  }
+}
